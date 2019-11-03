@@ -70,7 +70,8 @@ def HV(): #Change
 def Volatility():
 	yeet = Tk()
 	yeet.geometry("1280x720")
-	frame = Frame(yeet)
+	C = Canvas(yeet, height=720, width = 1280)
+	Starting_Image = PhotoImage(file= "//Users//abhinavkeswani//Desktop//Stockboi//Icons//slide1.jpeg")
 	Button1 = Button(yeet, text= "High Volatility")
 	Button1.pack()
 	Button2 = Button(yeet, text="Low Volatility")
@@ -82,14 +83,34 @@ def Volatility():
 def Starting():
 	yeet = Tk()
 	yeet.geometry("1280x720")
-	C = Canvas(yeet, height=1280, width = 720)
+	C = Canvas(yeet, height=720, width = 1280)
+	Starting_Image = PhotoImage(file= "/Users/abhinavkeswani/Desktop/Stockboi/Icons/slide2.gif")
 	button2 = Button(yeet, text="Get Investing Advice")
 	button2.pack()
 	button2.config(command=Volatility)
 	yeet.mainloop()
 
 #actual code is one line lol
-Starting()
+
+window = Tk()
+window.geometry("1920x1080")
+
+StartButton = Button(window, text="Press To Start")
+
+
+StartButton.pack()
+
+
+StartButton.config(command=Starting)
+# window.mainloop()
+
+C = Canvas(window, bg="blue", height=720, width=1234)
+filename = ImageTk.PhotoImage(file = "/Users/abhinavkeswani/Desktop/Stockboi/Icons/slide1editcopy.gif")
+background_label = Label(window, image=filename)
+background_label.pack()
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+window.mainloop()
 
 
 
