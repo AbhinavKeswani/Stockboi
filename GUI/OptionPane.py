@@ -82,30 +82,33 @@ def Volatility():
 
 def Starting():
 	yeet = Tk()
-	yeet.geometry("1280x720")
-	C = Canvas(yeet, height=720, width = 1280)
-	Starting_Image = PhotoImage(file= "/Users/abhinavkeswani/Desktop/Stockboi/Icons/slide2.gif")
-	button2 = Button(yeet, text="Get Investing Advice")
-	button2.pack()
+	yeet.geometry("1234x720")
+	filename = ImageTk.PhotoImage(file = "/Users/abhinavkeswani/Desktop/Stockboi/Icons/slide2edit.gif")
+	background_label = Label(yeet, image=filename)
+	background_label.pack()
+	background_label.place(x=0, y=0, relwidth=1, relheight=1)
+	button2 = Button(yeet, text="")
+	button2.pack(height=130, width=981)
+	button2.place(x=53, y=370)
 	button2.config(command=Volatility)
 	yeet.mainloop()
 
 #actual code is one line lol
 
 window = Tk()
-window.geometry("1920x1080")
+window.geometry("1234x720")
 
 StartButton = Button(window, text="Press To Start")
 
-
 StartButton.pack()
 
+StartButton.place(anchor=N)
 
 StartButton.config(command=Starting)
 # window.mainloop()
 
 C = Canvas(window, bg="blue", height=720, width=1234)
-filename = ImageTk.PhotoImage(file = "/Users/abhinavkeswani/Desktop/Stockboi/Icons/slide1editcopy.gif")
+filename = ImageTk.PhotoImage(file = "/Users/abhinavkeswani/Desktop/Stockboi/Icons/slide2edit.gif")
 background_label = Label(window, image=filename)
 background_label.pack()
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
